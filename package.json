@@ -1,0 +1,29 @@
+{
+  "name": "lysp",
+  "version": "1.0.0",
+  "description": "Custom lists",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server",
+    "server": "nodemon server/server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seeder": "node server/seedData/seeder.js",
+    "dbReset": "node server/seedData/seeder.js -d"
+  },
+  "author": "Kevin McCuistion",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "express-validator": "^6.7.0",
+    "mongoose": "^5.10.16"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
